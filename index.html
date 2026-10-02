@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Da Praça Burger | Autoatendimento & KDS</title>
+  </head>
+  <body class="bg-[#09090b] text-zinc-100">
+    <div id="root">
+      <div id="initial-loader" style="min-height: 100vh; background: radial-gradient(circle at 50% 20%, #18181b 0%, #09090b 80%); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: system-ui, -apple-system, sans-serif; color: #f4f4f5; padding: 20px; text-align: center;">
+        <img src="/logo.png" alt="Da Praça Burger" style="height: 76px; width: auto; margin-bottom: 20px; filter: drop-shadow(0 6px 14px rgba(249,115,22,0.4)); animation: pulse 2s infinite;" />
+        <h1 style="font-size: 24px; font-weight: 900; margin-bottom: 8px; color: #f59e0b; letter-spacing: -0.5px;">DA PRAÇA BURGER</h1>
+        <p style="font-size: 14px; color: #a1a1aa; max-width: 360px;">Carregando cardápio artesanal na brasa...</p>
+        
+        <script>
+          if (window.location.protocol === 'file:') {
+            document.getElementById('initial-loader').innerHTML = `
+              <div style="max-width: 520px; background: #121215; border: 1px solid #27272a; border-radius: 20px; padding: 32px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8);">
+                <div style="font-size: 48px; margin-bottom: 16px;">🍔</div>
+                <h2 style="font-size: 22px; font-weight: 800; color: #f59e0b; margin-bottom: 12px;">Como Visualizar o Sistema</h2>
+                <p style="font-size: 14px; color: #d4d4d8; line-height: 1.6; margin-bottom: 20px;">
+                  Você abriu o arquivo HTML diretamente no navegador (<code>file://</code>). Navegadores modernos bloqueiam módulos JavaScript nesse modo por segurança.
+                </p>
+                <div style="background: #09090b; border: 1px solid #27272a; border-radius: 12px; padding: 16px; text-align: left; margin-bottom: 20px;">
+                  <p style="font-size: 12px; font-weight: 700; color: #a1a1aa; margin-bottom: 6px; text-transform: uppercase;">Passo 1: No terminal da pasta do projeto, execute:</p>
+                  <pre style="background: #18181b; padding: 10px 14px; border-radius: 8px; font-size: 14px; color: #34d399; font-family: monospace; margin: 0; font-weight: bold;">npm run dev</pre>
+                  <p style="font-size: 12px; font-weight: 700; color: #a1a1aa; margin-top: 14px; margin-bottom: 6px; text-transform: uppercase;">Passo 2: Acesse o link no navegador:</p>
+                  <a href="http://localhost:5173" style="color: #38bdf8; font-family: monospace; font-size: 15px; font-weight: bold; text-decoration: underline;">http://localhost:5173</a>
+                </div>
+              </div>
+            `;
+          }
+        </script>
+      </div>
+    </div>
+    <noscript>
+      <div style="padding: 20px; text-align: center; color: white; font-family: sans-serif;">
+        É necessário habilitar o JavaScript no navegador para utilizar este aplicativo.
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+
+
